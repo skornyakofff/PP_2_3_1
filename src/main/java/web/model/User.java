@@ -18,12 +18,16 @@ public class User {
     @Column
     private int age;
 
+    @Column
+    private String surname;
+
     public User() {
     }
 
-    public User(String name, int age) {
+    public User(String name, int age, String surname) {
         this.name = name;
         this.age = age;
+        this.surname = surname;
     }
 
     public int getId() {
@@ -50,12 +54,30 @@ public class User {
         this.age = age;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+/*    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }*/
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", surname='" + surname + '\'' +
                 '}';
     }
 }

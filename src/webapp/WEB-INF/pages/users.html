@@ -20,6 +20,7 @@
   <tr>
     <th>Id</th>
     <th>Имя пользователя</th>
+    <th>Фамилия пользователя</th>
     <th>Возраст</th>
     <th>Редактировать пользователя</th>
     <th>Удалить пользователя</th>
@@ -28,6 +29,7 @@
   <tr th:each="user : ${users}">
     <td th:utext="${user.id}"></td>
     <td th:utext="${user.name}"></td>
+    <td th:utext="${user.surname}"></td>
     <td th:utext="${user.age}"></td>
     <td>
       <form th:action="@{users/edit/{id}(id=${user.id})}" th:object="${user}">
